@@ -6,14 +6,14 @@ const Constraint=Matter.Constraint;
 var ground, divisions;
 var particles=[];
 var plinkos=[];
-var divisions=[]
+var divisions=[];
 var divisionHeight=300;
 
 function preload(){
 }
 
 function setup(){
-    createCanvas(480,800);
+    createCanvas(600,800);
 
     myEngine=Engine.create();
     myWorld=myEngine.world;
@@ -38,14 +38,15 @@ function setup(){
     
     function draw(){ 
         background("black"); 
-        textSize(20) ("Score : "+score,20,30); 
-        Engine.update(engine); ground.display(); 
+        //textSize(20) ("Score : "+score,20,30); 
+        //Engine.update(engine); 
+        ground.display(); 
         for(var i = 0; i < plinkos.length; i++){ 
             plinkos[i].display(); 
         } 
         if(frameCount%60===0){ 
-            particles.push(new Particle(random(width/2-30, width/2+30), 10,10)); 
-            score++; 
+            particles.push(new Particles(random(width/2-30, width/2+30), 10,10)); 
+
         } 
         for(var j = 0; j < particles.length; j++){
             particles[j].display(); 

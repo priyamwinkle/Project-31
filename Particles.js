@@ -1,7 +1,7 @@
-class Plinko{
+class Particles{
     constructor(x,y){
         var options={
-            isStatic:true,
+            isStatic:false,
             restitution:0.1,
             friction:0.5,
             density:0.8
@@ -18,7 +18,7 @@ class Plinko{
         push ();
         translate (pos.x,pos.y)
         rectMode(CENTER);
-        fill ("purple");
+        fill ("blue");
         ellipse(0,0,this.r,this.r);
         pop ();
     }
