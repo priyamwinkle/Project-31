@@ -39,7 +39,7 @@ function setup(){
     function draw(){ 
         background("black"); 
         //textSize(20) ("Score : "+score,20,30); 
-        //Engine.update(engine); 
+        Engine.update(myEngine); 
         ground.display(); 
         for(var i = 0; i < plinkos.length; i++){ 
             plinkos[i].display(); 
